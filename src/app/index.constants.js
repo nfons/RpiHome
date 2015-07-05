@@ -3,9 +3,5 @@
   'use strict';
 
   angular
-    .module('rpiHome')
-    .constant('malarkey', malarkey)
-    .constant('toastr', toastr)
-    .constant('moment', moment);
-
+    .module('rpiHome');
 })();

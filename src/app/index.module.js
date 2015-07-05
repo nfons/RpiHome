@@ -1,3 +1,4 @@
+//jscs:disable maximumLineLength
 (function() {
   'use strict';
 

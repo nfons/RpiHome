@@ -6,8 +6,10 @@
     .controller('MainController', MainController);
 
   /** @ngInject */
-  function MainController($timeout) {
+  function MainController(CITY, NEWS) {
     var vm = this;
+    vm.currCity = CITY;
+    vm.news = "google.com";
 
   }
 })();

@@ -1,3 +1,5 @@
+'use strict';
+
 (function() {
   angular.module('rpiHome').directive('rssFeed', rssDirective);
 
@@ -7,9 +9,8 @@
       scope: {
         url: '@'
       },
-      bindToController: true,
       controller: function($scope, $log, $http) {
-        $log.info
+        $log.info($scope.url);
       },
       controllerAs: 'ctrl',
       templateUrl: 'rssFeed.html'

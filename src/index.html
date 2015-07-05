@@ -27,10 +27,10 @@
     <md-content ng-controller="MainController as main" layout-wrap layout="column">
       <md-content layout="row">
         <div flex="33" class="bgYellow">
-          test1
+          <weather city="main.currCity"></weather>
         </div>
         <div flex="33" class="bgOrange">
-          test
+          <rss-feed url="main.news"></rss-feed>
         </div>
         <div flex="33" class="bgBlue">
           test3

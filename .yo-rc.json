@@ -22,7 +22,7 @@
         }
       ],
       "jQuery": {
-        "key": "none"
+        "key": "jquery2"
       },
       "resource": {
         "key": "angular-resource",

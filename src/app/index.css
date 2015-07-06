@@ -1,7 +1,11 @@
 @import url(//fonts.googleapis.com/css?family=Roboto+Slab:400,700|Roboto:400,700,700italic,400italic);
 
 .bgYellow {
-  background-color: yellow;
+  background-color: #FFEE58;
+}
+
+.bgIndigo{
+  background-color: #3F51B5;
 }
 
 .bgOrange {
@@ -9,11 +13,15 @@
 }
 
 .bgBlue{
-  background-color: blue;
+  background-color: #007dc5;
 }
 
 .bgPurple{
   background-color: #77216F;
+}
+
+.bgGreen{
+  background-color: #00897B;
 }
 
 .divBox{
@@ -22,5 +30,8 @@
   border-radius: 5px;
 }
 clock{
+  font-size: 24px;
+}
+weather{
   font-size: 24px;
 }

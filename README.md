@@ -9,5 +9,6 @@ and maybe Stock info?
 
 
 
-== LICENSE ==
+==LICENSE==
+
 Released under GPLv3

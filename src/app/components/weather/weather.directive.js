@@ -1,6 +1,5 @@
-'use strict';
-
 (function() {
+  'use strict';
   angular.module('rpiHome').directive('weather', weatherDirective);
 
   function weatherDirective() {
@@ -13,6 +12,6 @@
         $log.info($scope.city);
       },
       templateUrl: '/app/components/weather/weather.html'
-    }
+    };
   }
 })();

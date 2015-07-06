@@ -1,15 +1,13 @@
 (function() {
   'use strict';
 
-  angular
-    .module('rpiHome')
-    .controller('MainController', MainController);
+  angular.module('rpiHome').controller('MainController', mainCTRL);
 
   /** @ngInject */
-  function MainController(CITY, NEWS) {
+  function mainCTRL(CITY, NEWS) {
     var vm = this;
     vm.currCity = CITY;
     vm.news = "google.com";
-
   }
+
 })();

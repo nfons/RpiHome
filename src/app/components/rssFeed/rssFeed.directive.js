@@ -1,6 +1,6 @@
-'use strict';
-
 (function() {
+  'use strict';
+
   angular.module('rpiHome').directive('rssFeed', rssDirective);
 
   function rssDirective() {
@@ -13,7 +13,7 @@
         $log.info($scope.url);
       },
       controllerAs: 'ctrl',
-      templateUrl: 'rssFeed.html'
+      templateUrl: 'app/components/rssFeed/rssFeed.html'
     };
   }
 })();

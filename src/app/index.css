@@ -11,3 +11,16 @@
 .bgBlue{
   background-color: blue;
 }
+
+.bgPurple{
+  background-color: #77216F;
+}
+
+.divBox{
+  color:white;
+  padding: 3em;
+  border-radius: 5px;
+}
+clock{
+  font-size: 24px;
+}

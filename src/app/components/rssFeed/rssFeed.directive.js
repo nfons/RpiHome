@@ -30,7 +30,8 @@
           vm.currentItem = vm.feeds[index];
 
       });
-      $timeout(this.getRSS, 1000 * 60 * 5); //every 5 mins recall
+
+      $timeout(vm.getRSS, 1000 * 60 * 5); //every 5 mins recall
     };
 
     vm.getRSS();

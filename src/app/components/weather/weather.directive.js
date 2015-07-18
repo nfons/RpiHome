@@ -22,7 +22,7 @@
                 vm.rain = true;
               }
             }
-          };
+          }
           vm.temperature = Math.round(vm.temperature / 4); //get average
         });
       },

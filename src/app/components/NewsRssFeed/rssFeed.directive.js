@@ -12,7 +12,7 @@
       controller: rssCtrl,
       controllerAs: 'ctrl',
       bindToController: true,
-      templateUrl: 'app/components/rssFeed/rssFeed.html'
+      templateUrl: 'app/components/NewsRssFeed/rssFeed.html'
     };
   }
 

@@ -1,0 +1,9 @@
+<md-card>
+  <md-card-title>
+    <md-card-title-text><span>Reuters News</span></md-card-title-text>
+  </md-card-title>
+<md-card-content>
+      <h4>{{ctrl.currentItem.title}}</h4>
+      <span ng-bind-html="ctrl.currentItem.contentSnippet"></span>
+</md-card-content>
+</md-card>

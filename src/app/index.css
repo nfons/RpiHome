@@ -29,9 +29,7 @@
   padding: 3em;
   border-radius: 5px;
 }
-clock{
-  font-size: 24px;
-}
-weather{
-  font-size: 24px;
+
+md-content, body{
+  background-color: #F7F3EB;
 }

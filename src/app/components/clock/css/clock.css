@@ -1,0 +1,11 @@
+.clock {
+  border: 5px solid black;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+.clock >  md-card-content{
+    border: 2px solid black;
+    border-radius: 3px;
+    font-size: 60px;
+}

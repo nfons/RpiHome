@@ -1,3 +1,6 @@
+/*
+using openweathermap, we will get 5 day, 3hr forecast
+*/
 (function() {
   'use strict';
   angular.module('rpiHome').directive('weather', weatherDirective);
@@ -12,15 +15,27 @@
         var vm = this;
         var url = WEATHER_API + vm.city;
         vm.temperature = 0;
-        vm.rain = false; //should i bring an umbrella?
+        vm.Status = undefined; //Rain / Snow / Etc
        vm.getWeather = function() {
          $http.get(url).then(function(response) {
            var data = response.data;
            for (var i = 0; i < 4; i += 1) { //the list is every 3 hours, so 3 x 4 = 12 hour time
              vm.temperature += data.list[i].main.temp;
              for (var j = 0; j < data.list[i].weather.length; j +=1) {
-               if(data.list[i].weather[j].main === 'Rain') {
-                 vm.rain = true;
+               var status = data.list[i].weather[j].main;
+               switch(status) {
+                 case 'Rain':
+                    vm.Status = 'wi-rain';
+                    break;
+                  case 'Clouds':
+                    vm.Status = 'wi-cloudy';
+                    break;
+                  case 'Snow':
+                    vm.Status = 'wi-snow';
+                    break;
+                  default:
+                    vm.Status =  'wi-day-sunny';
+                    break;
                }
              }
            }

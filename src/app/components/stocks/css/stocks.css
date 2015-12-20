@@ -1,11 +1,24 @@
 .negative {
-background-color: red;
+background-color: #eb3912;
 }
 
 .positive {
-  background-color: green;
+  background-color: #079807;
 }
 
-stock{
+.stock{
   margin-top: 10px;
+  margin-right:10px;
+  display: inline-block;
+  font-size: 40px;
+  text-align: center;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.stock > .price {
+  font-weight: bold;
+}
+.stock > .change {
+  font-size: 15px;
 }

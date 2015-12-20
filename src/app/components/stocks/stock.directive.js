@@ -29,6 +29,8 @@
       query = encodeURI(query) + STOCKS.env;
       $http.get(url+query).success(function(data){
         vm.price = data.query.results.quote.Bid;
+        vm.price = Number(vm.price).toFixed(2); //keep to 2 decimal places
+        vm.change = data.query.results.quote.ChangeinPercent;
         if(data.query.results.quote.Change.includes('-')) {
           vm.trend = 'negative';
         } else {

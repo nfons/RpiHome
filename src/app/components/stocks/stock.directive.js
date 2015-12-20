@@ -1,0 +1,45 @@
+(function() {
+  'use strict';
+
+  angular.module('rpiHome').directive('stock', stockDirective);
+
+  function stockDirective() {
+    return {
+      restrict: 'E',
+      scope: {
+        symbol: '@'
+      },
+      controller: stockCtrl,
+      controllerAs: 'vm',
+      bindToController: true,
+      templateUrl: 'app/components/stocks/stocks.html'
+    };
+  }
+
+  function stockCtrl($scope, STOCKS, $http) {
+    var vm = this;
+    var tick = 1000; //1 secs
+
+    vm.trend = 'neutral';
+
+    function getData() {
+      var url = STOCKS.base_url;
+
+      var query= STOCKS.select + '("' + vm.symbol +'")';
+      query = encodeURI(query) + STOCKS.env;
+      $http.get(url+query).success(function(data){
+        vm.price = data.query.results.quote.Bid;
+        if(data.query.results.quote.Change.includes('-')) {
+          vm.trend = 'negative';
+        } else {
+          vm.trend = 'positive';
+        }
+      });
+
+    }
+    getData();
+    setInterval(function () { //jshint ignore:line
+      getData();
+    }, tick * 10);
+  }
+})();

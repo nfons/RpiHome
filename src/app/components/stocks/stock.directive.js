@@ -42,6 +42,6 @@
     getData();
     setInterval(function () { //jshint ignore:line
       getData();
-    }, tick * 10);
+    }, tick * 60 * 60); //every 60 mins
   }
 })();

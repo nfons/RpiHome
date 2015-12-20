@@ -19,7 +19,7 @@
   function rssCtrl($scope, $timeout, $http) {
     var vm = this;
     var index = 0;
-    var tick = 10000;
+    var tick = 1000 * 15; //20 secs
     function googlerss (url) {
       return $http.jsonp('//ajax.googleapis.com/ajax/services/feed/load?v=1.0&num=50&callback=JSON_CALLBACK&q=' + encodeURIComponent(url));
     }
@@ -31,7 +31,7 @@
 
       });
 
-      $timeout(vm.getRSS, 1000 * 60 * 5); //every 5 mins recall
+      $timeout(vm.getRSS, 1000 * 60 * 30); //every 30 mins recall
     };
 
     vm.getRSS();

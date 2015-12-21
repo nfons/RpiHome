@@ -1,4 +1,4 @@
-Simple "Home" App meant to be run on a RPI 2.
+Simple "Home" App meant to be run on a RPI 2. [![Build Status](https://travis-ci.org/lilnate22/RpiHome.svg?branch=master)](https://travis-ci.org/lilnate22/RpiHome)
 
 This will show me relevant information when I wake up.
 

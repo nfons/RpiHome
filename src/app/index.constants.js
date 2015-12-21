@@ -5,6 +5,7 @@
     .module('rpiHome')
     .constant('CITY', 'Philadelphia')
     .constant('TECH_NEWS', 'https://www.reddit.com/r/technology.rss?sort=new')
+    .constant('BUSINESS_NEWS', 'http://rss.cnn.com/rss/money_latest.rss')
     .constant('NEWS', 'http://feeds.reuters.com/reuters/topNews')
     .constant('TIME', '')
     .constant('STOCKS', { base_url: 'http://query.yahooapis.com/v1/public/yql?q=',

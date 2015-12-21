@@ -15,8 +15,8 @@
       templateUrl: 'app/components/stocks/stocks.html'
     };
   }
-
-  function stockCtrl($scope, STOCKS, $http) {
+  /** @ngInject */
+  function stockCtrl(STOCKS, $http) {
     var vm = this;
     var tick = 1000; //1 secs
 

@@ -15,7 +15,7 @@
       templateUrl: 'app/components/NewsRssFeed/rssFeed.html'
     };
   }
-
+  /** @ngInject */
   function rssCtrl($scope, $timeout, $http) {
     var vm = this;
     var index = 0;

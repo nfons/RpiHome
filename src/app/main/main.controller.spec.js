@@ -6,7 +6,7 @@
 
     beforeEach(module('rpiHome'));
     it('should define more than 5 awesome things', inject(function($controller) {
-      var vm = $controller('MainController');
+      $controller('MainController');
     }));
   });
 })();

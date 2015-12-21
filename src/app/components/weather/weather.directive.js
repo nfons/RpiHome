@@ -19,6 +19,7 @@ using openweathermap, we will get 5 day, 3hr forecast
        vm.getWeather = function() {
          $http.get(url).then(function(response) {
            var data = response.data;
+           vm.CurrentTemp = Math.round(data.list[0].main.temp);
            for (var i = 0; i < 4; i += 1) { //the list is every 3 hours, so 3 x 4 = 12 hour time
              vm.temperature += data.list[i].main.temp;
              for (var j = 0; j < data.list[i].weather.length; j +=1) {

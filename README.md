@@ -18,7 +18,7 @@ To Run
 
 Sample (Demo)
 =============
-![Sample](http://imgur.com/R9GG0mw.jpg "Sample")
+![Sample](http://imgur.com/3KIo3A9.jpg "Sample")
 
 
 License

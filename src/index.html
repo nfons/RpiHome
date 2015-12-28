@@ -18,34 +18,6 @@
     <!-- css files will be automatically insert here -->
     <!-- endinject -->
     <!-- endbuild -->
-  </head>
-  <body>
-    <!--[if lt IE 10]>
-      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-    <![endif]-->
-
-    <md-content ng-controller="MainController as main" layout-wrap layout="column">
-      <md-content layout="row">
-        <div flex="66">
-          <div layout="row" layout-wrap>
-          <rss-feed url="{{main.news}}"></rss-feed>
-          <div flex="50">
-            <imgur-gallery></imgur-gallery>
-          </div>
-          <div flex="66">
-            <business-feed url="{{main.business}}"></business-feed>
-          </div>
-        </div>
-      </div>
-        <div flex="33" class="">
-          <clock></clock>
-          <weather city="{{main.currCity}}"></weather>
-          <div class="heading">Stocks</div>
-          <stock symbol="BX"></stock><stock symbol="DIA"></stock><stock symbol="CHL"></stock><stock symbol="SPY"></stock><stock symbol="BBRY"></stock>
-        </div>
-      </md-content>
-    </md-content>
-
 
     <!-- build:js(src) scripts/vendor.js -->
     <!-- bower:js -->
@@ -62,6 +34,26 @@
     <!-- angular templates will be automatically converted in js and inserted here -->
     <!-- endinject -->
     <!-- endbuild -->
+  </head>
+  <body>
+    <!--[if lt IE 10]>
+      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+
+    <md-content ng-controller="MainController as main" layout-wrap layout="column">
+      <md-content layout="row">
+        <div flex="66">
+          <traffic-map></traffic-map>
+      </div>
+        <div flex="33" class="">
+          <clock></clock>
+          <weather city="{{main.currCity}}"></weather>
+          <div class="heading">Stocks</div>
+          <stock symbol="BX"></stock><stock symbol="DIA"></stock><stock symbol="CHL"></stock><stock symbol="SPY"></stock><stock symbol="BBRY"></stock>
+        </div>
+      </md-content>
+    </md-content>
+
 
   </body>
 </html>

@@ -3,6 +3,6 @@
   'use strict';
 
   angular
-    .module('rpiHome', ['ngAnimate', 'ngSanitize', 'ngResource', 'ngMaterial', 'angular-carousel']);
+    .module('rpiHome', ['ngAnimate', 'ngSanitize', 'ngResource', 'ngMaterial', 'uiGmapgoogle-maps']);
 
 })();

@@ -2,7 +2,17 @@
 
 var express = require('express');
 var mongoose = require('mongoose');
+var bodyParser = require('body-parser');
+
+var dinnerRoutes = require('./routes/dinner-route');
+
 var app = express();
+
+
+app.use(bodyParser.json());
+app.use('/dinner', dinnerRoutes);
+
+mongoose.connect('mongodb://localhost:27017/rpihome');
 
 app.get('/', function (req, res) {
   res.send('Hello World!');

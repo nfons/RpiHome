@@ -31,7 +31,7 @@
         vm.price = data.query.results.quote.Bid;
         vm.price = Number(vm.price).toFixed(2); //keep to 2 decimal places
         vm.change = data.query.results.quote.ChangeinPercent;
-        if(data.query.results.quote.Change!= null && data.query.results.quote.Change.indexOf('-') !== -1) {
+        if(data.query.results.quote.Change!== null && data.query.results.quote.Change.indexOf('-') !== -1) {
           vm.trend = 'negative';
         } else {
           vm.trend = 'positive';

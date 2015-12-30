@@ -39,6 +39,9 @@
       });
 
     }
+    
+    vm.getData = getData;
+    
     getData();
     setInterval(function () { //jshint ignore:line
       getData();

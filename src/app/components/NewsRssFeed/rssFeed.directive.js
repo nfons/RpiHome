@@ -21,7 +21,7 @@
     var index = 0;
     var tick = 1000 * 15; //20 secs
     function googlerss (url) {
-      return $http.jsonp('//ajax.googleapis.com/ajax/services/feed/load?v=1.0&num=50&callback=JSON_CALLBACK&q=' + encodeURIComponent(url));
+      return $http.jsonp('http://ajax.googleapis.com/ajax/services/feed/load?v=1.0&num=50&callback=JSON_CALLBACK&q=' + encodeURIComponent(url));
     }
 
     vm.getRSS = function() {

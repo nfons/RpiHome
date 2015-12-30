@@ -10,8 +10,9 @@
   "validthis": true,
   "jasmine": true,
   "globals": {
-    "angular": false,
-    "inject": false,
-    "module": false
+    "angular": true,
+    "inject": true,
+    "module": true,
+    "it": true
   }
 }

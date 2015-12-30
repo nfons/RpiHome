@@ -14,11 +14,11 @@ function listFiles() {
 
   return wiredep(wiredepOptions).js
     .concat([
-      path.join(conf.paths.src, '/app/**/*.module.js'),
-      path.join(conf.paths.src, '/app/**/*.js'),
-      path.join(conf.paths.src, '/**/*.spec.js'),
-      path.join(conf.paths.src, '/**/*.mock.js'),
-      path.join(conf.paths.src, '/**/*.html')
+      path.join(conf.paths.src, '/app/**/**/*.module.js'),
+      path.join(conf.paths.src, '/app/**/**/*.js'),
+      path.join(conf.paths.src, '/**/**/*.spec.js'),
+      path.join(conf.paths.src, '/**/**/*.html'),
+      {pattern: conf.paths.src + '/app/**/**/*.mock.json', watched: true, served: true, included: false}
     ]);
 }
 
@@ -26,7 +26,7 @@ module.exports = function(config) {
 
   var configuration = {
     files: listFiles(),
-
+ 
     singleRun: true,
 
     autoWatch: false,
@@ -52,9 +52,10 @@ module.exports = function(config) {
     ],
 
     preprocessors: {
-      'src/**/*.html': ['ng-html2js']
+      'src/**/**/*.html': ['ng-html2js']
     }
   };
+  
 
   // This block is needed to execute Chrome on Travis
   // If you ever plan to use Chrome and Travis, you can keep it

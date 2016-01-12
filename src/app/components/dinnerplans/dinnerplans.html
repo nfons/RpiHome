@@ -1,0 +1,12 @@
+<div layout="row">
+<div ng-repeat="day in vm.dinner track by $index">
+     <md-card class="dinnerbox">
+        <md-card-title>
+            <h2>{{day.Day}}</h2>
+        </md-card-title>
+        <md-card-content layout="row" layout-align="space-between">
+            {{day.Meal}}
+        </md-card-content>
+     </md-card>
+</div>
+</div>

@@ -16,7 +16,7 @@
     function trafficController($http,CITY,$timeout,$interval) {
       var vm = this;
       vm.map = {center: {latitude: 0, longitude: 0 }, zoom: 11 };
-      $http.get('//maps.googleapis.com/maps/api/geocode/json?address='+CITY).success(function(data){
+      $http.get('//maps.googleapis.com/maps/api/geocode/json?address='+CITY + ', PA').success(function(data){
         var location = data.results[0].geometry.location;
         vm.map.center.latitude = location.lat;
         vm.map.center.longitude = location.lng;

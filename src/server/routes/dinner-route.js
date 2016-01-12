@@ -3,6 +3,16 @@ var express = require('express')
 var router = express.Router();
 var Dinner =  require('../models/dinner');
 
+//CORS middleware
+var allowCrossDomain = function(req, res, next) {
+    res.header('Access-Control-Allow-Origin', '*');
+    res.header('Access-Control-Allow-Methods', 'GET,PUT,POST,DELETE');
+    res.header('Access-Control-Allow-Headers', 'Content-Type');
+    next();
+}
+router.use(allowCrossDomain);
+
+
 router.get('/', function(req,res){
     Dinner.find({}, function(err,docs){
         if(!docs)
@@ -23,15 +33,25 @@ router.post('/updateWeekDinner', function(req,res){
         dinner.Day = body.Day;
         dinner.Meal = body.Meal
         Dinner.findOne({Day:dinner.Day}, function(err,docs){
-            if(docs)
-               docs.remove();
+            if(docs) {
+                docs.Meal = dinner.Meal;
+                docs.save(function(err){
+                    if(!err){
+                        res.send('OK')
+                    } else {
+                        res.status(500).send('Error');
+                    }
+                });
+            } else {
+                dinner.save(function(err){
+                    if(err)
+                        res.status(500).send('Error')
+                    else
+                        res.send('OK');
+                })
+            }
+               
         })
-        dinner.save(function(err){
-            if(err)
-                res.send('error' +err);
-            else
-                res.send('OK');
-        });
         
     }
 });

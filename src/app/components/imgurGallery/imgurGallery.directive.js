@@ -25,8 +25,7 @@
       }).error(function(){
         getRandomGallery(); //retry
       }).finally(function(){
-        var randImgIndx = Math.floor(Math.random() * (images.data.length - 0));
-        vm.image = images.data[randImgIndx].link;
+          getRandomImage();
       });
     }
 
